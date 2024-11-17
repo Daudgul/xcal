@@ -9,8 +9,8 @@ const App = () => {
 
     if (check) {
       interval = setInterval(() => {
-        setTime((prevTime) => prevTime + 10);
-      }, 10);
+        setTime((prevTime) => prevTime + 1000);
+      }, 1000);
     } else if (!check && interval) {
       clearInterval(interval);
     }
@@ -43,7 +43,7 @@ const App = () => {
       </div>
       <div>
         <button onClick={() => setCheck((prev) => !prev)}>
-          {check ? "Pause" : "Start"}
+          {check ? "Stop" : "Start"}
         </button>
         <button
           onClick={() => {
